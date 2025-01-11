@@ -1,6 +1,5 @@
 <script>
   import Hero from "$lib/components/Hero.svelte";
-  import { LightSwitch } from "@skeletonlabs/skeleton";
   import ArrowDown from "~icons/material-symbols/keyboard-double-arrow-down-rounded";
   import { crossfade, fade, fly } from "svelte/transition";
   import { onMount } from "svelte";
@@ -43,8 +42,3 @@
     {/if}
   </div>
 </header>
-
-<!-- Your next section -->
-<section class="h-screen scroll-snap-start">
-  <!-- Content -->
-</section>
