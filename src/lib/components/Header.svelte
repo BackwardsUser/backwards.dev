@@ -17,7 +17,7 @@
   });
 </script>
 
-<header class="align-center flex h-screen flex-col justify-between p-4">
+<header class="align-center flex h-screen flex-col justify-between p-4 hero">
   <div class=""></div>
   <Hero></Hero>
   <div 

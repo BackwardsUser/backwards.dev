@@ -1,12 +1,125 @@
-<script>
-	import Header from "$lib/components/Header.svelte";
-  import { LightSwitch } from "@skeletonlabs/skeleton";
-
-</script>
-
-<Header></Header>
-<p>
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequuntur totam nemo voluptatum esse? Maiores modi animi distinctio unde temporibus eius possimus id rem quos, iste cupiditate repellat maxime at!
+import "clsx";
+import { X as fallback, Y as store_get, Z as head, _ as attr, $ as unsubscribe_stores, a0 as bind_props, S as pop, a1 as sanitize_props, a2 as stringify, Q as push, a3 as spread_attributes } from "../../chunks/index.js";
+import { g as get, w as writable, r as readable } from "../../chunks/index2.js";
+function html(value) {
+  var html2 = String(value ?? "");
+  var open = "<!---->";
+  return open + html2 + "<!---->";
+}
+function Hero($$payload) {
+  $$payload.out += `<div class="text-center h-max self-center" id="hero"><h1 class="text-6xl">Backwards Development</h1> <h4 class="text-2xl">A Software Development and Distribution Company</h4></div>`;
+}
+const stores = {};
+function localStorageStore(key, initialValue, options) {
+  if (!stores[key]) {
+    const store = writable(initialValue, (set2) => {
+    });
+    const { subscribe, set } = store;
+    stores[key] = {
+      set(value) {
+        set(value);
+      },
+      update(updater) {
+        const value = updater(get(store));
+        set(value);
+      },
+      subscribe
+    };
+  }
+  return stores[key];
+}
+localStorageStore("modeOsPrefers", false);
+localStorageStore("modeUserPrefers", void 0);
+const modeCurrent = localStorageStore("modeCurrent", false);
+function setInitialClassState() {
+  const elemHtmlClasses = document.documentElement.classList;
+  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
+  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
+  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
+    elemHtmlClasses.add("dark");
+  } else {
+    elemHtmlClasses.remove("dark");
+  }
+}
+function prefersReducedMotion() {
+  return false;
+}
+readable(prefersReducedMotion(), (set) => {
+});
+function LightSwitch($$payload, $$props) {
+  const $$sanitized_props = sanitize_props($$props);
+  push();
+  var $$store_subs;
+  let trackBg, thumbBg, thumbPosition, iconFill, classesTrack, classesThumb, classesIcon;
+  let title = fallback($$props["title"], "Toggle light or dark mode.");
+  let bgLight = fallback($$props["bgLight"], "bg-surface-50");
+  let bgDark = fallback($$props["bgDark"], "bg-surface-900");
+  let fillLight = fallback($$props["fillLight"], "fill-surface-50");
+  let fillDark = fallback($$props["fillDark"], "fill-surface-900");
+  let width = fallback($$props["width"], "w-12");
+  let height = fallback($$props["height"], "h-6");
+  let ring = fallback($$props["ring"], "ring-[1px] ring-surface-500/30");
+  let rounded = fallback($$props["rounded"], "rounded-token");
+  const cTransition = `transition-all duration-[200ms]`;
+  const cTrack = "cursor-pointer";
+  const cThumb = "aspect-square scale-[0.8] flex justify-center items-center";
+  const cIcon = "w-[70%] aspect-square";
+  const svgPath = {
+    sun: "M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zm32 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128z",
+    moon: "M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+  };
+  trackBg = store_get($$store_subs ??= {}, "$modeCurrent", modeCurrent) === true ? bgLight : bgDark;
+  thumbBg = store_get($$store_subs ??= {}, "$modeCurrent", modeCurrent) === true ? bgDark : bgLight;
+  thumbPosition = store_get($$store_subs ??= {}, "$modeCurrent", modeCurrent) === true ? "translate-x-[100%]" : "";
+  iconFill = store_get($$store_subs ??= {}, "$modeCurrent", modeCurrent) === true ? fillLight : fillDark;
+  classesTrack = `${cTrack} ${cTransition} ${width} ${height} ${ring} ${rounded} ${trackBg} ${$$sanitized_props.class ?? ""}`;
+  classesThumb = `${cThumb} ${cTransition} ${height} ${rounded} ${thumbBg} ${thumbPosition}`;
+  classesIcon = `${cIcon} ${iconFill}`;
+  head($$payload, ($$payload2) => {
+    $$payload2.out += `${html(`<script nonce="%sveltekit.nonce%">(${setInitialClassState.toString()})();<\/script>`)}`;
+  });
+  $$payload.out += `<div${attr("class", `lightswitch-track ${stringify(classesTrack)}`)} role="switch" aria-label="Light Switch"${attr("aria-checked", store_get($$store_subs ??= {}, "$modeCurrent", modeCurrent))}${attr("title", title)} tabindex="0"><div${attr("class", `lightswitch-thumb ${stringify(classesThumb)}`)}><svg${attr("class", `lightswitch-icon ${stringify(classesIcon)}`)} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path${attr("d", store_get($$store_subs ??= {}, "$modeCurrent", modeCurrent) ? svgPath.sun : svgPath.moon)}></path></svg></div></div>`;
+  if ($$store_subs) unsubscribe_stores($$store_subs);
+  bind_props($$props, {
+    title,
+    bgLight,
+    bgDark,
+    fillLight,
+    fillDark,
+    width,
+    height,
+    ring,
+    rounded
+  });
+  pop();
+}
+function Keyboard_double_arrow_down_rounded($$payload, $$props) {
+  const { $$slots, $$events, ...p } = $$props;
+  $$payload.out += `<svg${spread_attributes(
+    {
+      viewBox: "0 0 24 24",
+      width: "1.2em",
+      height: "1.2em",
+      ...p
+    },
+    void 0,
+    void 0,
+    3
+  )}><path fill="currentColor" d="m12 16.175l3.9-3.875q.275-.275.688-.288t.712.288q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062t-.375-.062t-.325-.213l-4.6-4.6q-.275-.275-.288-.687T6.7 12.3q.275-.275.7-.275t.7.275zm0-6L15.9 6.3q.275-.275.688-.287t.712.287q.275.275.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062t-.375-.062t-.325-.213L6.7 7.7q-.275-.275-.288-.687T6.7 6.3q.275-.275.7-.275t.7.275z"></path></svg>`;
+}
+function Header($$payload, $$props) {
+  push();
+  $$payload.out += `<header class="align-center flex h-screen flex-col justify-between p-4"><div></div> `;
+  Hero($$payload);
+  $$payload.out += `<!----> <div${attr("class", `transition-all duration-300 text-xl self-center ease-in-out relative ${stringify([""].filter(Boolean).join(" "))}`)}${attr("style", `transform: translateX(${stringify("0px")})`)}><div class="animate-bounce">`;
+  Keyboard_double_arrow_down_rounded($$payload, {});
+  $$payload.out += `<!----></div></div></header>`;
+  pop();
+}
+function _page($$payload) {
+  Header($$payload);
+  $$payload.out += `<!----> <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequuntur totam nemo voluptatum esse? Maiores modi animi distinctio unde temporibus eius possimus id rem quos, iste cupiditate repellat maxime at!
   Harum cum libero illum eius doloremque reiciendis incidunt consequuntur eum dolor temporibus accusantium quasi repellat porro tenetur amet id adipisci magni unde non modi tempore recusandae doloribus, culpa asperiores. Ullam.
   Dicta voluptatibus voluptas illum aspernatur voluptatum reprehenderit, doloribus maxime tempora, alias veritatis asperiores. Aut, voluptatibus vero! At quas officiis nemo laudantium et quos laborum recusandae eveniet, repellendus in! Corporis, nobis.
   Fugiat nihil quia veniam. Hic voluptas ex officia? Hic, sed praesentium. Magnam quis, cumque recusandae expedita sequi soluta nesciunt atque! Enim, minima laborum atque maxime accusantium nobis dignissimos doloribus rerum?
@@ -105,6 +218,10 @@
   Ut eaque eveniet porro, odio iusto non facilis ad aliquid tempore adipisci perferendis? Facilis libero quod reprehenderit laboriosam, tenetur, vero accusantium officiis, nesciunt quaerat velit veritatis minima delectus nisi eos!
   Veritatis dignissimos magni consectetur, nostrum itaque et sed recusandae reprehenderit error enim vitae, sint, voluptatibus omnis at minima tempore! Eius sit similique in consequuntur possimus, veniam ratione delectus voluptas ab.
   Saepe in quaerat, eius nobis voluptates, corporis distinctio, sed nostrum corrupti vero aliquid amet itaque alias necessitatibus? Asperiores expedita harum libero autem perferendis iure tempore, eveniet tempora dignissimos id saepe.
-  Incidunt commodi earum similique beatae. Dolores minima reprehenderit fugit laboriosam, eum ullam quod unde obcaecati beatae facilis dolore sed totam quibusdam repellat, incidunt, ipsa consectetur nemo aspernatur. Alias, eveniet quis!
-</p>
-<LightSwitch />
+  Incidunt commodi earum similique beatae. Dolores minima reprehenderit fugit laboriosam, eum ullam quod unde obcaecati beatae facilis dolore sed totam quibusdam repellat, incidunt, ipsa consectetur nemo aspernatur. Alias, eveniet quis!</p> `;
+  LightSwitch($$payload, {});
+  $$payload.out += `<!---->`;
+}
+export {
+  _page as default
+};
