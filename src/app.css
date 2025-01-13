@@ -1,3 +1,24 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Nunita';
+  src: url('$lib/assets/fonts/Nunito-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('$lib/assets/fonts/Roboto-VariableFont_wdth,wght.ttf');
+}
+
+:root {
+  --theme-font-family-base: 'Roboto', serif;
+  --theme-font-family-heading: 'Roboto', serif;
+}
+
+:root body[data-theme='modern'],
+:root body[data-theme='gold-nouveau'] {
+  --theme-font-family-base: 'Nunita', serif;
+  --theme-font-family-heading: 'Nunita', serif;
+}

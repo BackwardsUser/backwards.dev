@@ -1,0 +1,42 @@
+[
+  {
+    "name": "SvelteKit",
+    "logo": "https://raw.githubusercontent.com/sveltejs/branding/2af7bc72f1bf5152dab89bee1ee2093b1be0824d/svelte-logo.svg",
+    "url": "https://svelte.dev/"
+  },
+  {
+    "name": "Tailwindcss",
+    "logo": "https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg",
+    "url": "https://tailwindcss.com/"
+  },
+  {
+    "name": "Skeleton.dev",
+    "logo": "https://api.backwards.dev/images/skeleton.dev.svg",
+    "url": "https://www.skeleton.dev/"
+  },
+  {
+    "name": "Express.js",
+    "logo": "https://api.backwards.dev/images/expressjs.svg",
+    "url": "https://expressjs.com/"
+  },
+  {
+    "name": "Typescript",
+    "logo": "https://api.backwards.dev/images/typescript.svg",
+    "url": "https://www.typescriptlang.org/"
+  },
+  {
+    "name": "MariaDB",
+    "logo": "https://api.backwards.dev/images/mariadb.png",
+    "url": "https://mariadb.org/"
+  },
+  {
+    "name": "Cloudflare",
+    "logo": "https://api.backwards.dev/images/cloudflare.svg",
+    "url": "https://www.cloudflare.com/en-ca/"
+  },
+  {
+    "name": "Discord",
+    "logo": "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/653714c17467993e7b389c83_636e0a6918e57475a843f59f_icon_clyde_black_RGB.svg",
+    "url": "https://discord.com/"
+  }
+]

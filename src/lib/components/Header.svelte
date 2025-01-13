@@ -24,7 +24,7 @@
 </style>
 
 <!-- Add scroll-snap-align to your sections -->
-<header class="align-center flex h-screen flex-col justify-between p-4 hero scroll-snap-start">
+<header class="fancy-background align-center flex h-screen flex-col justify-between p-4 hero scroll-snap-start">
   <div class=""></div>
   <Hero></Hero>
   <div 
