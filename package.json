@@ -12,6 +12,11 @@
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.3",
+		"@fontsource/abril-fatface": "^5.1.1",
+		"@fontsource/inter": "^5.1.1",
+		"@fontsource/playfair-display": "^5.1.1",
+		"@fontsource/quicksand": "^5.1.1",
+		"@fontsource/space-grotesk": "^5.1.1",
 		"@iconify/json": "^2.2.293",
 		"@skeletonlabs/skeleton": "^2.10.4",
 		"@skeletonlabs/tw-plugin": "^0.4.0",

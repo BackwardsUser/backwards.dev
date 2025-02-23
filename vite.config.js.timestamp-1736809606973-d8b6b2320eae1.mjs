@@ -1,0 +1,17 @@
+// vite.config.js
+import { sveltekit } from "file:///C:/Users/alexa/Documents/Coding/NodeJS/Webpages/backwards.dev/node_modules/@sveltejs/kit/src/exports/vite/index.js";
+import { defineConfig } from "file:///C:/Users/alexa/Documents/Coding/NodeJS/Webpages/backwards.dev/node_modules/vite/dist/node/index.js";
+import Icons from "file:///C:/Users/alexa/Documents/Coding/NodeJS/Webpages/backwards.dev/node_modules/unplugin-icons/dist/vite.js";
+var vite_config_default = defineConfig({
+  plugins: [
+    sveltekit(),
+    Icons({
+      compiler: "svelte",
+      autoInstall: true
+    })
+  ]
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJDOlxcXFxVc2Vyc1xcXFxhbGV4YVxcXFxEb2N1bWVudHNcXFxcQ29kaW5nXFxcXE5vZGVKU1xcXFxXZWJwYWdlc1xcXFxiYWNrd2FyZHMuZGV2XCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ZpbGVuYW1lID0gXCJDOlxcXFxVc2Vyc1xcXFxhbGV4YVxcXFxEb2N1bWVudHNcXFxcQ29kaW5nXFxcXE5vZGVKU1xcXFxXZWJwYWdlc1xcXFxiYWNrd2FyZHMuZGV2XFxcXHZpdGUuY29uZmlnLmpzXCI7Y29uc3QgX192aXRlX2luamVjdGVkX29yaWdpbmFsX2ltcG9ydF9tZXRhX3VybCA9IFwiZmlsZTovLy9DOi9Vc2Vycy9hbGV4YS9Eb2N1bWVudHMvQ29kaW5nL05vZGVKUy9XZWJwYWdlcy9iYWNrd2FyZHMuZGV2L3ZpdGUuY29uZmlnLmpzXCI7aW1wb3J0IHsgc3ZlbHRla2l0IH0gZnJvbSAnQHN2ZWx0ZWpzL2tpdC92aXRlJztcclxuaW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAndml0ZSc7XHJcbmltcG9ydCBJY29ucyBmcm9tICd1bnBsdWdpbi1pY29ucy92aXRlJ1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29uZmlnKHtcclxuXHRwbHVnaW5zOiBbXHJcblx0XHRzdmVsdGVraXQoKSxcclxuXHRcdEljb25zKHtcclxuXHRcdFx0Y29tcGlsZXI6ICdzdmVsdGUnLFxyXG5cdFx0XHRhdXRvSW5zdGFsbDogdHJ1ZVxyXG5cdFx0fSlcclxuXHRdXHJcbn0pO1xyXG4iXSwKICAibWFwcGluZ3MiOiAiO0FBQXlYLFNBQVMsaUJBQWlCO0FBQ25aLFNBQVMsb0JBQW9CO0FBQzdCLE9BQU8sV0FBVztBQUVsQixJQUFPLHNCQUFRLGFBQWE7QUFBQSxFQUMzQixTQUFTO0FBQUEsSUFDUixVQUFVO0FBQUEsSUFDVixNQUFNO0FBQUEsTUFDTCxVQUFVO0FBQUEsTUFDVixhQUFhO0FBQUEsSUFDZCxDQUFDO0FBQUEsRUFDRjtBQUNELENBQUM7IiwKICAibmFtZXMiOiBbXQp9Cg==

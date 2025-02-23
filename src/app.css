@@ -2,7 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@font-face {
+/* @font-face {
   font-family: 'Nunita';
   src: url('$lib/assets/fonts/Nunito-VariableFont_wght.ttf');
 }
@@ -21,4 +21,4 @@
 :root body[data-theme='gold-nouveau'] {
   --theme-font-family-base: 'Nunita', serif;
   --theme-font-family-heading: 'Nunita', serif;
-}
+} */

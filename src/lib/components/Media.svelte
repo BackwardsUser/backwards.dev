@@ -1,13 +1,16 @@
 <script>
   import MaterialSymbolsArrowForwardRounded from "~icons/material-symbols/arrow-forward-rounded";
   import MaterialSymbolsLabProfileOutline from '~icons/material-symbols/lab-profile-outline';
+
+  let mediaPageOnline = false;
+
 </script>
 
 <div class="w-screen h-screen flex flex-col justify-center items-center">
   <h2 class="h2 font-bold">Backwards Media</h2>
   <h3 class="h3">Upload and Share Media with your Friends</h3>
   <div class="flex flex-row controls pt-4 gap-12">
-    <a href="https://media.backwards.dev/" class="btn variant-filled-primary cool-hover">
+    <a href={mediaPageOnline ? "https://media.backwards.dev/" : ""} class="btn variant-filled-primary cool-hover opacity-50 cursor-not-allowed">
       <span>Try it out</span>
       <span class="effect duration-500 ease-in-out rounded-xl"><MaterialSymbolsArrowForwardRounded /></span>
     </a>

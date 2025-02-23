@@ -4,7 +4,7 @@
 </script>
 
 <div class="w-screen h-screen flex justify-center items-center">
-  <form action="?/contact" class="bg-surface-900 w-1/2 h-1/2 p-8 rounded-md">
+  <form action="?/contact" class="dark:bg-surface-900 bg-surface-200 w-1/2 min-h-max p-8 rounded-md">
     <h1 class="h1 font-bold ps-4 pb-4">Contact Us</h1>
     <hr class="opacity-25" />
     <p class="pt-4">Fullname</p>

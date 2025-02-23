@@ -1,11 +1,11 @@
 <script>
   import { onMount } from "svelte";
   import Header from "$lib/components/Header.svelte";
-  import Downloads from "$lib/components/Downloads.svelte";
   import { fly } from "svelte/transition";
   import Media from "$lib/components/Media.svelte";
   import Contact from "$lib/components/Contact.svelte";
   import TechStack from "$lib/components/TechStack.svelte";
+  import Projects from "$lib/components/Projects.svelte";
 
   /* IMPORTANT */
   // Anything added into the page directly will likely break the page's scrolling behaviour
@@ -14,10 +14,10 @@
 
   let slides = [
     Header,
-    Downloads,
-    Media,
+    Projects,
     TechStack,
-    Contact
+    Contact,
+    // Media,
   ];
 
 

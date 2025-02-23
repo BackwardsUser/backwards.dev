@@ -1,0 +1,35 @@
+[
+  {
+    "name": "PlugsyCord",
+    "description": "A Modular Discord bot to help you better manage your discord server the way *you* want.",
+    "author": {
+      "username": "BackwardsUser",
+      "icon": "https://cdn.discordapp.com/avatars/471172695862542337/306522a721ee716ba6348babfd9bbdff.webp?size=32"
+    },
+    "date": "22/02/2025",
+    "url": "https://github.com/BackwardsUser/PlugsyCord",
+    "thumbnail": "https://api.backwardsdevelopment.ca/images/PlugsyCord-exbanner.png"
+  },
+  {
+    "name": "HTTP Proxy",
+    "description": "A HTTP Proxy tool that allows for incoming traffic to be routed to a given url.",
+    "author": {
+      "username": "BackwardsUser",
+      "icon": "https://cdn.discordapp.com/avatars/471172695862542337/306522a721ee716ba6348babfd9bbdff.webp?size=32"
+    },
+    "date": "00/00/0000",
+    "url": "https://github.com/BackwardsUser/http-proxy",
+    "thumbnail": null
+  },
+  {
+    "name": "My API",
+    "description": "A dynamic content hub for hosting scripts, media, files, and themes, powered by a custom file explorer.",
+    "author": {
+      "username": "BackwardsUser",
+      "icon":"https://cdn.discordapp.com/avatars/471172695862542337/306522a721ee716ba6348babfd9bbdff.webp?size=32"
+    },
+    "date": "02/10/2024",
+    "url": "https://api.backwards.dev/patchnotes_latest.txt",
+    "thumbnail": null
+  }
+]

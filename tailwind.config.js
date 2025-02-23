@@ -18,7 +18,18 @@ export default {
 	plugins: [
 		forms,
 		skeleton({
-			themes: { preset: [ "skeleton", "wintry", "modern", "rocket", "seafoam", "vintage", "sahara", "hamlindigo", "gold-nouveau", "crimson" ]}
+			themes: { preset: [
+				{ name: "skeleton", enhancements: true },
+				{ name: "wintry", enhancements: true },
+				{ name: "modern", enhancements: true },
+				{ name: "rocket", enhancements: true },
+				{ name: "seafoam", enhancements: true },
+				{ name: "vintage", enhancements: true },
+				{ name: "sahara", enhancements: true },
+				{ name: "hamlindigo", enhancements: true },
+			  { name: "gold-nouveau", enhancements: true },
+			  { name: "crimson", enhancements: true }
+			 ]}
 		})
 	]
 }
