@@ -10,7 +10,7 @@
 </script>
 
 <div class="text-center h-max self-center" id="hero">
-  <h1 class="h1">Backwards Development</h1>
+  <h1 class="h1 overflow-hidden">Backwards Development</h1>
   <h4 class="h4">A Software Development and Distribution Company</h4>
   <div class="flex justify-evenly pt-4">
     <a href="https://github.com/BackwardsUser/" class="btn variant-filled-surface text-2xl p-3 rounded-md spin">

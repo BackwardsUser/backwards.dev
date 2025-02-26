@@ -2,6 +2,16 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+* {
+  overflow-x: hidden;
+}
+
+*:not(a),
+*:not(button),
+*:not(input) {
+  user-select: none;
+}
+
 /* @font-face {
   font-family: 'Nunita';
   src: url('$lib/assets/fonts/Nunito-VariableFont_wght.ttf');

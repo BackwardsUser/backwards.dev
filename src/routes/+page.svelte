@@ -62,9 +62,15 @@
   }
 
   .section {
-    scroll-snap-align: start;
     min-height: 100vh; /* Full viewport height */
     width: 100vw;
+  }
+
+  /* Scroll Snapping works well with a mouse, but without it feels forced, weird and wrong. */
+  @media (width >= 64rem) {
+    .section {
+      scroll-snap-align: center;
+    }
   }
 
   /* Tracker Styles */

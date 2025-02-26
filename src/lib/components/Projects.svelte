@@ -14,8 +14,8 @@
 
 
 <div class="min-h-screen">
-  <h2 class="h2 text-center w-screen pt-4">Projects</h2>
-  <div class="flex gap-4 p-4 w-max m-auto">
+  <h2 class="h2 text-center w-screen pt-4 overflow-hidden">Projects</h2>
+  <div class="flex flex-wrap gap-4 p-4 w-max max-w-full m-auto">
     {#each projects as project}
       <a href={project.url} class="card w-min variant-glass-surface card-hover overflow-hidden flex flex-col">
         <header>
