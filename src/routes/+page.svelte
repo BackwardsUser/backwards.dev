@@ -1,98 +1,56 @@
 <script>
-  import { onMount } from "svelte";
-  import Header from "$lib/components/Header.svelte";
-  import { fly } from "svelte/transition";
-  import Media from "$lib/components/Media.svelte";
-  import Contact from "$lib/components/Contact.svelte";
-  import TechStack from "$lib/components/TechStack.svelte";
-  import Projects from "$lib/components/Projects.svelte";
 
-  /* IMPORTANT */
-  // Anything added into the page directly will likely break the page's scrolling behaviour
-  // To properly add something to the main page, make it into a component and add it to the array.
-  // This array is in order of how they are to be displayed, modifying their positions will modify them in page.
+  import BrandIcon from "$lib/components/items/BrandIcon.svelte";
 
-  let slides = [
-    Header,
-    Projects,
-    TechStack,
-    Contact,
-    // Media,
-  ];
+  import MdiGithub from '~icons/mdi/github';
+  import MdiYoutube from '~icons/mdi/youtube';
+  import MdiDiscord from '~icons/mdi/discord';
+  import MdiLinkedin from '~icons/mdi/linkedin';
+  import CibGitea from '~icons/cib/gitea';
 
+  const brands = [
+    { url: "https://www.github.com/BackwardsUser", icon: CibGitea },
+    { url: "https://www.youtube.com/@BackwardsDevelopment", icon: MdiYoutube },
+    { url: "https://discord.gg/Zhq9yjhHKr", icon: MdiDiscord },
+    { url: "https://www.linkedin.com/in/alexander-harding-71b661265/", icon: MdiLinkedin },
+    { url: "https://git.backwards.dev/", icon: CibGitea },
+  ]
 
-  let currentSection = 0;
-
-  // Update the current section based on scroll position
-  const handleScroll = () => {
-    const sections = document.querySelectorAll(".section");
-    const scrollTop = document.querySelector(".scroll-container").scrollTop;
-    sections.forEach((section, index) => {
-      if (section.offsetTop <= scrollTop + window.innerHeight / 2) {
-        currentSection = index;
-      }
-    });
-  };
 </script>
-
-<div id="main" class="scroll-container" on:scroll={handleScroll}>
-  {#each slides as content}
-    <section class="section">
-      <svelte:component this={content} />
-    </section>
-  {/each}
-</div>
-
-<!-- Tracker -->
-{#if currentSection > 0}
-  <div in:fly={{ x: 50, duration: 300 }} out:fly={{ x: 50, duration: 300 }} class="tracker">
-    {#each slides.slice(1) as _, i}
-      <div class="tracker-dot {i + 1 === currentSection ? 'active' : ''}"></div>
-    {/each}
+<main class="grid wrapper justify-center items-center">
+  <div class="left w-full h-2/3 bg-surface-500 text-center">
+    <h4 class="h4">Tools</h4>
   </div>
-{/if}
+  <div class="header-wrapper">
+    <header class="w-full h-screen flex flex-col justify-center items-center">
+      <h1 class="h1">Alexander Harding</h1>
+      <h4 class="h4">Software and Application Developer</h4>
+      <div class="cards w-full flex justify-between">
+        {#each brands as brand}
+          <BrandIcon url={brand.url} icon={brand.icon} />
+        {/each}
+      </div>
+    </header>
+  </div>
+  <div class="right w-full h-2/3 bg-surface-500 text-center">
+    <h4 class="h4">Downloads</h4>
+  </div>
+  <div class="main">
+    <div class="projects"></div>
+    <div class="contact"></div>
+  </div>
+</main>
 
 <style>
-  .scroll-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: auto;
-    height: 100vh;
-    width: 100vw;
-    scroll-behavior: smooth;
+  .wrapper {
+    grid-template-columns: 0.5fr 2fr 0.5fr;
   }
 
-  .section {
-    min-height: 100vh; /* Full viewport height */
-    width: 100vw;
+  .left {
+    border-radius: 0 0.5em 0.5em 0;
   }
 
-  /* Scroll Snapping works well with a mouse, but without it feels forced, weird and wrong. */
-  @media (width >= 64rem) {
-    .section {
-      scroll-snap-align: center;
-    }
-  }
-
-  /* Tracker Styles */
-  .tracker {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .tracker-dot {
-    width: 10px;
-    height: 10px;
-    @apply bg-surface-600;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-  }
-
-  .tracker-dot.active {
-    @apply bg-primary-600;
+  .right {
+    border-radius: 0.5em 0 0 0.5em;
   }
 </style>
