@@ -25,7 +25,7 @@
     <header class="w-full h-screen flex flex-col justify-center items-center">
       <h1 class="h1">Alexander Harding</h1>
       <h4 class="h4">Software and Application Developer</h4>
-      <div class="cards w-full flex justify-between">
+      <div class="cards flex justify-between">
         {#each brands as brand}
           <BrandIcon url={brand.url} icon={brand.icon} />
         {/each}
