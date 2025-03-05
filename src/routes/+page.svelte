@@ -21,8 +21,8 @@
 
 <div id="page-wrapper">
   {#if width >= 768}
-    <Large {data}/>
+    <Large {data} />
   {:else}
-    <Small />
+    <Small {data} />
   {/if}
 </div>
