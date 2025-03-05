@@ -32,7 +32,7 @@
   const downloads = [];
 
   let End = 300;
-  let rightStart = 100;
+  let rightStart = 0;
 
   function setSidebars() {
     let rPos = Math.min(window.scrollY / End, 1);
