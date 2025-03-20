@@ -3,6 +3,7 @@
   import MdiYoutube from "~icons/mdi/youtube";
   import MdiDiscord from "~icons/mdi/discord";
   import MdiLinkedin from "~icons/mdi/linkedin";
+  import MdiResume from '~icons/mdi/resume';
   import CibGitea from "~icons/cib/gitea";
   import MaterialSymbolsPerson from '~icons/material-symbols/person';
   import MaterialSymbolsMail from '~icons/material-symbols/mail';
@@ -23,6 +24,7 @@
 
   const brands = [
     { url: "https://www.github.com/BackwardsUser", icon: MdiGithub },
+    { url: "https://api.backwards.dev/files/Alexander_Harding_Resume.docx", icon: MdiResume },
     { url: "https://www.youtube.com/@BackwardsDevelopment", icon: MdiYoutube },
     { url: "https://discord.gg/Zhq9yjhHKr", icon: MdiDiscord },
     { url: "https://www.linkedin.com/in/alexander-harding-71b661265/", icon: MdiLinkedin },
