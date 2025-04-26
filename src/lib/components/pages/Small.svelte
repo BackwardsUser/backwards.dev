@@ -18,13 +18,13 @@
   import techs from "$lib/data/techstack.json";
 
   const brands = [
-    { url: "https://www.github.com/BackwardsUser", icon: MdiGithub, redirect: false },
-    { url: "https://git.backwards.dev/", icon: CibGitea, redirect: false },
-    { url: "https://api.backwards.dev/files/Alexander_Harding_Resume.docx", icon: MdiResume, redirect: false },
-    { url: "https://www.linkedin.com/in/alexander-harding-71b661265/", icon: MdiLinkedin, redirect: false },
-    { url: "https://doodle.com/bp/backwards_user__/schedule-a-meeting", icon: MaterialSymbolsCalendarClockOutline, redirect: true },
-    { url: "https://discord.gg/Zhq9yjhHKr", icon: MdiDiscord, redirect: false },
-    { url: "https://www.youtube.com/@BackwardsDevelopment", icon: MdiYoutube, redirect: false },
+    { url: "https://www.github.com/BackwardsUser", icon: MdiGithub },
+    { url: "https://git.backwards.dev/", icon: CibGitea },
+    { url: "https://api.backwards.dev/files/Alexander_Harding_Resume.docx", icon: MdiResume },
+    { url: "https://www.linkedin.com/in/alexander-harding-71b661265/", icon: MdiLinkedin },
+    { url: "https://doodle.com/bp/backwards_user__/schedule-a-meeting", icon: MaterialSymbolsCalendarClockOutline },
+    { url: "https://discord.gg/Zhq9yjhHKr", icon: MdiDiscord },
+    { url: "https://www.youtube.com/@BackwardsDevelopment", icon: MdiYoutube },
   ];
 </script>
 
