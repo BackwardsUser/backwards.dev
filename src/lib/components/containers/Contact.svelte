@@ -1,3 +1,5 @@
+<!-- Color of this component needs to be fixed... -->
+
 <script>
   import MaterialSymbolsPerson from '~icons/material-symbols/person';
   import MaterialSymbolsMail from '~icons/material-symbols/mail';
