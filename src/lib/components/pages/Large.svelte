@@ -1,3 +1,5 @@
+<!-- How to make smoother scroll gooders -->
+
 <script>
   import MdiGithub from "~icons/mdi/github";
   import MdiYoutube from "~icons/mdi/youtube";
