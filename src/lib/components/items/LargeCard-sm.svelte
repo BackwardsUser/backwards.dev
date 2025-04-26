@@ -2,6 +2,7 @@
   import { Avatar } from "@skeletonlabs/skeleton";
 
   const fallbackThumbnail = "/Image_not_available.png";
+  const fallbackAvatar = "/default.png";
 
   function handleImageError(event) {
     event.target.src = fallbackThumbnail;
