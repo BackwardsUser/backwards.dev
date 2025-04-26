@@ -12,7 +12,7 @@
       width = window.innerWidth;
     };
 
-    updateWidth(); // Set initial width
+    updateWidth();
     window.addEventListener("resize", updateWidth);
 
     return () => window.removeEventListener("resize", updateWidth);
