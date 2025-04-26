@@ -15,8 +15,6 @@
 
   import techs from "$lib/data/techstack.json";
 
-  export let data;
-
   const brands = [
     { url: "https://www.github.com/BackwardsUser", icon: MdiGithub, redirect: false },
     { url: "https://git.backwards.dev/", icon: CibGitea, redirect: false },
@@ -29,23 +27,3 @@
 </script>
 
 <Header {brands} />
-
-<!-- <div class="main flex flex-col gap-8">
-  <div class="section">
-    <Header {brands} />
-  </div>
-  <div class="section bg-surface-800 py-4 rounded-2xl flex flex-col">
-    <TechStack {techs} />
-  </div>
-  <div class="section bg-surface-800 py-4 rounded-2xl">
-    <Projects {data} />
-  </div>
-</div> -->
-
-<style>
-  .section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
