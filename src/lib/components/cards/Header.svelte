@@ -8,6 +8,7 @@
   <div id="header-wrapper" class="header-wrapper text-center">
     <h1 id="title" class="h1">Alexander Harding</h1>
     <h4 class="h4 m-0">Software and Application Developer</h4>
+    <!-- Brand Icons aren't wrapping... -->
     <div class="cards flex w-full justify-between mt-6">
       {#each brands as brand}
         <BrandIcon url={brand.url} icon={brand.icon} />
