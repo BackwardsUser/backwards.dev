@@ -1,4 +1,3 @@
-<!-- test -->
 <script>
 	import '../app.css';
 	import { autoModeWatcher } from '@skeletonlabs/skeleton';
