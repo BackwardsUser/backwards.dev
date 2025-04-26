@@ -19,7 +19,6 @@
   import projects from "$lib/data/projects.json";
 
   import { onMount } from "svelte";
-  import DylanIpsum from "dylan-ipsum";
   import LargeCard from "../items/LargeCard.svelte";
   import Contact from "../containers/Contact.svelte";
 
