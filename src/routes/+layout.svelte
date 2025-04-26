@@ -1,3 +1,4 @@
+<!-- Fake Comment -->
 <script>
 	import '../app.css';
 	import { autoModeWatcher } from '@skeletonlabs/skeleton';
