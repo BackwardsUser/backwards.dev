@@ -20,8 +20,4 @@
   .header-wrapper {
     position: relative;
   }
-
-  #title.fixed {
-    transform: translateY(-100%) translateX(-0.75em);
-  }
 </style>
