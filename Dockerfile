@@ -1,15 +1,15 @@
-# syntax=docker/dockerfile:1
-FROM node:20-alpine
+FROM node:20-alpine AS builder
 
 WORKDIR /app
+COPY . .
+RUN npm install && npm run build
 
-# Copy over only what you need for runtime
-COPY build ./build
-COPY package.json package-lock.json ./
+FROM node:20-alpine
+WORKDIR /app
 
-# Install only prod dependencies
+COPY --from=builder /app/build ./build
+COPY package*.json ./
 RUN npm ci --only=production
 
 EXPOSE 3000
-
 CMD ["node", "build"]
